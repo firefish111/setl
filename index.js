@@ -1,6 +1,8 @@
 let lobj = {};
 let root;
+const { decode } = require("./toolkit")
 let proc = str => {
+  str = str.toString();
   if (str.split("\n").length != 1) {
     str.split("\n").forEach(line => proc(line));
     return;
@@ -11,10 +13,13 @@ let proc = str => {
       root = curr[1];
       break;
     case "set":
-      itm = perform(curr[1]);
+      itm = decode(curr[1]);
       if (!curr[2]) {
         itm = {};
         break;
       }
   }
+}
+module.exports = {
+  proc
 }

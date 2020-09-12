@@ -1,0 +1,10 @@
+root powerful
+set a
+set _a + q
+set a/q = esp
+set a/q + selfur
+lst a/q/selfur = "plonk"
+lst a/q/selfur + 711
+lst a/q/selfur + "mr. cabbage man"
+itm a/q/esp = 1
+set ^a = :root
